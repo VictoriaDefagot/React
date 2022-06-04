@@ -5,7 +5,7 @@ import GenreInDb from './GenreInDb';
 
 function ContentRowTop(){
     return(
-        <React.Fragment>
+        <>
 
 				{/*<!-- Content Row Top -->*/}
 				<div className="container-fluid">
@@ -20,7 +20,7 @@ function ContentRowTop(){
 				</div>
 				{/*<!--End Content Row Top-->*/}
 
-        </React.Fragment>
+        </>
     )
 }
 
