@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 function CardMovies(props){
     return(
@@ -6,7 +7,6 @@ function CardMovies(props){
         <div className="row">
 
         {props.cards.map((card, i) => 
-
                 <div key={card + i} className="col-md-4 mb-4">
                     <div key={card.border + i} className={`card border-left-${card.border} shadow h-100 py-2`}>
 
@@ -26,11 +26,27 @@ function CardMovies(props){
                 </div>
 
         )}
-
         </div>
 
         </>
     )
-}
+};
+
+CardMovies.propTypes = {
+    name: PropTypes.string.isRequired,
+    border: PropTypes.string.isRequired,
+    number: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]).isRequired,
+    icon: PropTypes.string.isRequired
+};
+
+CardMovies.defaultProps = {
+    name: "Unnamed",
+    border: "primary",
+    number: "-",
+    icon: "question"
+};
 
 export default CardMovies;

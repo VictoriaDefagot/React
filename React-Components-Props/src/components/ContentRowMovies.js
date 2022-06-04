@@ -9,11 +9,7 @@ function ContentRowMovies() {
     return ( 
         <>
 
-            {/*<!-- Content Row Movies-->*/}
-
-                <CardMovies cards={cards} />
-            
-            {/*<!-- Content Row Movies-->*/}
+            <CardMovies cards={cards} />
 
         </>
     )
